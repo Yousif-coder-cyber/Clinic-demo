@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>City Medical Clinic</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+    body {
+      margin: 0;
+      color: #111;
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 20px;
+      background: #0a4d8c;
+      color: white;
+      position: sticky;
+      top: 0;
+    }
+    nav a {
+      color: white;
+      margin-left: 15px;
+      text-decoration: none;
+    }
+    .hero {
+      padding: 80px 20px;
+      text-align: center;
+      background: #f2f6fb;
+    }
+    .hero h1 {
+      font-size: 32px;
+    }
+    .btn {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 14px 24px;
+      background: #0a4d8c;
+      color: white;
+      text-decoration: none;
+    }
+    section {
+      padding: 60px 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+    }
+    .card {
+      padding: 20px;
+      background: #f5f5f5;
+      text-align: center;
+    }
+    form {
+      max-width: 400px;
+      margin: auto;
+    }
+    input {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 15px;
+    }
+    button {
+      width: 100%;
+      padding: 14px;
+      background: #0a4d8c;
+      color: white;
+      border: none;
+    }
+    footer {
+      background: #0a4d8c;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">City Medical Clinic</div>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<section id="home" class="hero">
+  <h1>Trusted Medical Care</h1>
+  <p>Professional healthcare for you and your family</p>
+  <a href="#contact" class="btn">Book Appointment</a>
+</section>
+
+<section id="about">
+  <h2>About Us</h2>
+  <p>
+    City Medical Clinic provides primary healthcare services with a focus on patient safety,
+    fast service, and accurate diagnosis.
+  </p>
+</section>
+
+<section id="services">
+  <h2>Our Services</h2>
+  <div class="cards">
+    <div class="card">General Checkups</div>
+    <div class="card">Diagnostics</div>
+    <div class="card">Vaccinations</div>
+    <div class="card">Laboratory Tests</div>
+  </div>
+</section>
+
+<section id="contact">
+  <h2>Contact Us</h2>
+
+  <form onsubmit="sendForm(event)">
+    <input type="text" placeholder="Full Name" required>
+    <input type="tel" placeholder="Phone Number" required>
+    <input type="email" placeholder="Email" required>
+    <button type="submit">Send Request</button>
+  </form>
+
+  <div class="info">
+    <p>Phone: +962 7X XXX XXXX</p>
+    <p>Location: Amman, Jordan</p>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 City Medical Clinic</p>
+</footer>
+
+<script>
+  function sendForm(e) {
+    e.preventDefault();
+    alert("Appointment request sent");
+  }
+</script>
+
+</body>
+</html>
